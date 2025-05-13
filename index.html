@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SUNDIAL</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div id="particles-js"></div>
+    <h1 class="floating">SUNDIAL</h1>
+    <p>A narrative-driven game about memory, truth, and the cost of rewriting the world.</p>
+    <div class="scroll-indicator pulse">
+      <svg width="30px" height="50px" viewBox="0 0 30 50" style="opacity: 0.7; margin-top: 50px;">
+        <path d="M15,0 L15,25" stroke="#ffc107" stroke-width="2" fill="none" stroke-dasharray="5,5"/>
+        <path d="M0,25 L15,50 L30,25" stroke="#ffc107" stroke-width="2" fill="none"/>
+      </svg>
+    </div>
+  </header>
+
+  <section class="intro reveal">
+    <h2 class="section-title">About the Game</h2>
+    <p>
+      In a world fractured by war and secrecy, <strong>Maria Araya</strong> searches for her missing father—
+      a man erased from history by the mysterious Project Sundial.  
+      Set in a reimagined, post-war Slovakia, SUNDIAL is a choice-driven narrative game where every decision shapes the story.  
+      As alliances shift and enemies blur, will you uncover the truth, or rewrite it?
+    </p>
+  </section>
+
+    <section class="reveal">
+    <h2 class="section-title">Meet the Key Players</h2>
+    <div class="characters">
+      <div class="character reveal" style="transition-delay: 0.1s" onclick="openCharacterModal('maria')">
+        <h3>Maria Araya</h3>
+        <p>A former fighter turned truth-seeker. Driven by a personal mission, Maria navigates political chaos, lost memories, and buried betrayals.</p>
+      </div>
+      <div class="character reveal" style="transition-delay: 0.2s" onclick="openCharacterModal('lenka')">
+        <h3>Lenka</h3>
+        <p>A tech-savvy data smuggler. Charming, ruthless, and always three steps ahead. Her information may come at a cost…</p>
+      </div>
+      <div class="character reveal" style="transition-delay: 0.3s" onclick="openCharacterModal('kazi')">
+        <h3>Kazi</h3>
+        <p>Leader of a rogue faction. Haunted by war and betrayal, Kazi seeks revolution—but whose future does he serve?</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Character Modals -->
+  <div id="maria-modal" class="character-modal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal('maria-modal')">&times;</button>
+      <div class="modal-character-header">
+        <img src="https://placehold.co/400x400/1a1a1a/ffc107?text=Maria+Araya" alt="Maria Araya" class="modal-character-image">
+        <div class="modal-character-info">
+          <h3>Maria Araya</h3>
+          <span class="role">Former Fighter / Truth-Seeker</span>
+          <p class="quote">"The past can't be changed, but the truth can be uncovered."</p>
+        </div>
+      </div>
+      <div class="modal-character-details">
+        <div class="character-stats">
+          <h4>Attributes</h4>
+          <div class="stat-item">
+            <span class="stat-label">Combat</span>
+            <div class="stat-bar">
+              <div class="stat-fill" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Intuition</span>
+            <div class="stat-bar">
+              <div class="stat-fill" style="width: 75%"></div>
+            </div>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Persuasion</span>
+            <div class="stat-bar">
+              <div class="stat-fill" style="width: 65%"></div>
+            </div>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Stealth</span>
+            <div class="stat-bar">
+              <div class="stat-fill" style="width: 60%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="character-bio">
+          <h4>Biography</h4>
+          <p>Maria Araya is a former special forces operative who left military service after discovering disturbing truths about her father's disappearance. Skilled in hand-to-hand combat and tactical operations, she now uses her skills to uncover secrets the powerful would rather keep buried.</p>
+          <p>Her journey takes her through the fractured remains of post-war Slovakia, where she must navigate complex political alliances while confronting her own fragmented memories of the war.</p>
+          <p><strong>Key Relationships:</strong> Daughter of Dr. Emil Araya (missing), Former comrade of Kazi, Reluctant ally of Lenka</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="lenka-modal" class="character-modal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal('lenka-modal')">&times;</button>
+      <div class="modal-character-header">
+        <img src="https://placehold.co/400x400/1a1a1a/ff7043?text=Lenka" alt="Lenka" class="modal-character-image">
+        <div class="modal-character-info">
+          <h3>Lenka</h3>
+          <span class="role">Data Smuggler / Information Broker</span>
+          <p class="quote">"Information isn't power—it's currency. And I'm the richest woman in the Dead Zone."</p>
+        </div>
+      </div>
+      <div class="modal-character-details">
+        <div class="character-stats">
+          <h4>Attributes</h4>
+          <div class="stat-item">
+            <span class="stat-label">Hacking</span>
+            <div class="stat-bar">
+              <div class="stat-fill" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Charisma</span>
+            <div class="stat-bar">
+              <div class="stat-fill" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Stealth</span>
+            <div class="stat-bar">
+              <div class="stat-fill" style="width: 70%"></div>
+            </div>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Combat</span>
+            <div class="stat-bar">
+              <div class="stat-fill" style="width: 40%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="character-bio">
+          <h4>Biography</h4>
+          <p>Lenka operates the most extensive information network in the Dead Zone, trading secrets for favors and survival. With a sharp wit and sharper tongue, she navigates the dangerous underworld of data trafficking with calculated precision.</p>
+          <p>Her past is deliberately obscured—whether by her own design or external forces remains unclear. What is certain is that she knows more about Project Sundial than she lets on, and her price for that information may be more than Maria is willing to pay.</p>
+          <p><strong>Key Relationships:</strong> Information source for all factions, Business partner to the Black Market, Knew Dr. Araya before his disappearance</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="kazi-modal" class="character-modal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal('kazi-modal')">&times;</button>
+      <div class="modal-character-header">
+        <img src="https://placehold.co/400x400/1a1a1a/9c27b0?text=Kazi" alt="Kazi" class="modal-character-image">
+        <div class="modal-character-info">
+          <h3>Kazi</h3>
+          <span class="role">Revolutionary Leader</span>
+          <p class="quote">"The war never ended—it just changed battlegrounds."</p>
+        </div>
+      </div>
+      <div class="modal-character-details">
+        <div class="character-stats">
+          <h4>Attributes</h4>
+          <div class="stat-item">
+            <span class="stat-label">Leadership</span>
+            <div class="stat-bar">
+              <div class="stat-fill" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Combat</span>
+            <div class="stat-bar">
+              <div class="stat-fill" style="width: 75%"></div>
+            </div>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Strategy</span>
+            <div class="stat-bar">
+              <div class="stat-fill" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Stealth</span>
+            <div class="stat-bar">
+              <div class="stat-fill" style="width: 50%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="character-bio">
+          <h4>Biography</h4>
+          <p>Once a decorated officer, Kazi now leads a rogue faction fighting against both the government and corporate forces controlling post-war Slovakia. His methods are controversial, but his conviction is unwavering.</p>
+          <p>Haunted by his actions during the war, Kazi sees Project Sundial as both a threat and potential weapon. His relationship with Maria is complicated by their shared past—they were once comrades, but the truth about her father's disappearance may make them enemies.</p>
+          <p><strong>Key Relationships:</strong> Former comrade of Maria, Enemy of the current regime, Suspected by Lenka</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="reveal">
+    <h2 class="section-title">Story Acts</h2>
+    <div class="acts">
+      <h3>Act 1: SHADOWS OF WAR</h3>
+      <p>Maria's search begins in a fragmented Slovakia controlled by rival factions. As she follows rumors of her father's survival, she's pulled into a struggle between nationalism, rebellion, and corporate manipulation. Trust is a weapon. History is rewritten.</p>
+
+      <h3>Act 2: THREADS OF THE PAST</h3>
+      <p>Leads point to a blacksite known as the Dead Zone—and Project Sundial, a memory-manipulation experiment that rewrote her father. Maria must choose her companion, confront betrayals, and walk into the unknown, hunted by the man who replaced her father's legacy.</p>
+
+      <h3>Act 3: RESET THE WORLD</h3>
+      <p>At the heart of the Sundial facility, Maria discovers a machine that rewrites identity. The final decision: activate it to rewrite the past… or destroy it and live with the scars. Her choices will shape the world's future—or erase it.</p>
+    </div>
+  </section>
+
+  <section class="features reveal">
+    <h2 class="section-title">Game Features</h2>
+    <ul>
+      <li>Rich branching narrative with multiple endings</li>
+      <li>Meaningful choices with long-term impact</li>
+      <li>Atmospheric Eastern European dystopian setting</li>
+      <li>Immersive character relationships</li>
+      <li>Original soundtrack</li>
+    </ul>
+  </section>
+
+  <section class="trailer-section reveal">
+    <h2 class="section-title">Trailer</h2>
+    <div class="trailer">
+      <iframe src="https://www.youtube.com/" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section class="gallery reveal">
+    <h2 class="section-title">Gallery</h2>
+    <img src="https://placehold.co/600x400/1a1a1a/ffc107?text=Screenshot+1" alt="Screenshot 1" class="reveal" style="transition-delay: 0.1s">
+    <img src="https://placehold.co/600x400/1a1a1a/ff7043?text=Screenshot+2" alt="Screenshot 2" class="reveal" style="transition-delay: 0.2s">
+    <img src="https://placehold.co/600x400/1a1a1a/9c27b0?text=Screenshot+3" alt="Screenshot 3" class="reveal" style="transition-delay: 0.3s">
+    <img src="https://placehold.co/600x400/1a1a1a/e0e0e0?text=Screenshot+4" alt="Screenshot 4" class="reveal" style="transition-delay: 0.4s">
+  </section>
+
+  <footer class="reveal">
+    <p>Experience the story. Change the outcome.</p>
+    <button class="cta-button">Wishlist SUNDIAL Now</button>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

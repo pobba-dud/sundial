@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+
   // Close modal with Escape key
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
